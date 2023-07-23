@@ -5,6 +5,7 @@
 
 
 def logFileLineSplitter(logLine):
+    # Look through the log and pull out information
     # List out the attributes we will be stripping from the line
     ipAddress = logLine.split(" ")[0]
     timeStamp = logLine[logLine.find("[")+1:logLine.find("]")]
@@ -25,8 +26,10 @@ def logFileLineSplitter(logLine):
     print(httpResponseCode)
     print(osOfRequester)
     '''
-    
     return arrayOfItems
+
+
+
 
 def main():
 
@@ -35,7 +38,7 @@ def main():
         print("*")
 
     logFileData = []
-    with open("logFile_test.txt", "r") as logFile:
+    with open("./logFile_test.txt", "r") as logFile:
         for line in logFile:
             # 0 - ipAddress
             # 1 - timeStamp
@@ -61,8 +64,10 @@ def main():
     topFiveIPAddresses = {}
     
     for i in range(5):
-        formattedIPInfo = str(sortedIPAddressHits[i]).replace("(","").replace("'","").split(",")
+        formattedIPInfo = str(sortedIPAddressHits[i]).replace("(","").replace("'","").replace(")","").split(",")
         topFiveIPAddresses[formattedIPInfo[0]] = formattedIPInfo[1]
+
+    print(topFiveIPAddresses)
     
     # Objective 3
     '''

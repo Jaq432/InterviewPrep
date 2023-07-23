@@ -1,6 +1,8 @@
 # The goal of this program is to re-engineer the sorting algorithm and sort items of a list in ascending order
 # The sorting algorithm used here is a selection sort
 
+# This is a selection sort
+
 def main():
     baseList = [1,5,78,54,23,48,1,52,68,2,1,48,36,2,18,79]
     sortedList = selectionSort(baseList)

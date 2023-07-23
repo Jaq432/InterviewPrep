@@ -74,7 +74,7 @@ def calcDays(forcastTemperatures):
     return(daysUntilNextHigherTemp)
 
 
-             
+
 print(calcDays(forcastTemperatures))
 '''
 #1)
