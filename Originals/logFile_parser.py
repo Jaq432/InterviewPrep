@@ -63,9 +63,7 @@ def main():
 
     topFiveIPAddresses = {}
     
-    for i in range(5):
-        formattedIPInfo = str(sortedIPAddressHits[i]).replace("(","").replace("'","").replace(")","").split(",")
-        topFiveIPAddresses[formattedIPInfo[0]] = formattedIPInfo[1]
+    topFiveIPAddresses = sortedIPAddressHits[:5]
 
     print(topFiveIPAddresses)
     

@@ -10,7 +10,8 @@ for x in range(500):
     generatedSecondIp = str(168)
     generatedThirdIp = str(42)
     generatedFourthIp = str(random.randint(1,254))
-    generatedDay = str(random.randint(0,31))
+    #generatedDay = str(random.randint(0,31))
+    generatedDay = 12
     generatedHour = str(random.randint(0,24))
     generatedMinute = str(random.randint(0,60))
     generatedSecond = str(random.randint(0,60))
