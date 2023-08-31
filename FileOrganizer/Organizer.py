@@ -5,8 +5,7 @@
 #
 # Hits at the bottom of the file
 
-
-
+import os
 
 fileExtensions = {
     'pdf': "PDFs",
@@ -31,7 +30,10 @@ fileExtensions = {
 }
 
 
-
+for extension in fileExtensions:
+    fileName = f'ima{extension}.{extension}'
+    file = open(fileName,'w')
+    file.close()
 
 
 
